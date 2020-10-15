@@ -351,7 +351,7 @@ protected:
 private:
   // Definition of member variables
   nav2_util::LifecycleNode::WeakPtr nh_;
-  rclcpp::Logger logger_;
+  rclcpp::Logger logger_{rclcpp::get_logger("")};
   rclcpp::Clock::SharedPtr clock_;
   rclcpp::Node::SharedPtr intra_proc_node_;
   // external objects (store weak pointers)
